@@ -12,4 +12,6 @@ If the app gets any traction I will write easy install program for it.
 ###How to remove it
 Application in this point has to be killed via Task Manager. You will find it as "SkypeMaster.exe *32" in processes list.
 
+###How it works
+App uses Windows Hooks to detect when WM_CLOSE message is sent and forwards that to the main application that then asks user if he wants to kill Skype. Skype is blocked untill user decides weather to kill it or not.
 
