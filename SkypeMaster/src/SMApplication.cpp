@@ -44,6 +44,12 @@ SMStateManager* SMApplication::getStateManager()
 
 SMExitCode SMApplication::start()
 {
+	//	Check for duplicate instance
+	if (alreadyRunning()){
+		SMDialogBox::showMessage(TEXT("Program is already running."), TEXT("SkypeMaster"));
+		return SMExitCodeDuplicateInstance;
+	}
+
 	//	Create listener window
 	if (!_window.create())
 		return SMExitCodeFailCannotCreateWindow;
@@ -105,6 +111,17 @@ bool SMApplication::processWindowCloseEvent(HWND window)
 		}
 	}
 
+	return false;
+}
+
+bool SMApplication::alreadyRunning()
+{
+	//	Initialize mutex and if get error just return
+	HANDLE hMootex = CreateMutex(NULL, false, TEXT("SkypeMasterMootex"));
+	DWORD state = GetLastError();
+	if (state == ERROR_ALREADY_EXISTS){
+		return true;
+	}
 	return false;
 }
 

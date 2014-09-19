@@ -12,6 +12,7 @@ typedef enum SMExitCode {
 	SMExitCodeFail = 1,
 	SMExitCodeFailCannotCreateWindow = 2,
 	SMExitCodeFailCannotInstallHook = 3,
+	SMExitCodeDuplicateInstance = 4,
 };
 
 /***
@@ -37,6 +38,13 @@ private:
 	 *	Main application window that listens for messages.
 	 */
 	SMWindow _window;
+
+	/**
+	 *	Checks if app is already running.
+	 *	So we don't have multiple instances.
+	 *	\return true if running false otherwise.
+	 */
+	bool alreadyRunning();
 
 	/*** Constructor (private */
 	SMApplication();
