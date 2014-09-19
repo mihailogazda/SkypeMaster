@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkypeMaster", "SkypeMaster\project\SkypeMaster.vcxproj", "{8256E907-A7BE-4F02-99BF-1ABD0E989134}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2AC4D563-AECC-4639-9135-9B4697C8AF63} = {2AC4D563-AECC-4639-9135-9B4697C8AF63}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkypeMasterDLL", "SkypeMasterDLL\project\SkypeMasterDLL.vcxproj", "{2AC4D563-AECC-4639-9135-9B4697C8AF63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8256E907-A7BE-4F02-99BF-1ABD0E989134}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8256E907-A7BE-4F02-99BF-1ABD0E989134}.Debug|Win32.Build.0 = Debug|Win32
+		{8256E907-A7BE-4F02-99BF-1ABD0E989134}.Release|Win32.ActiveCfg = Release|Win32
+		{8256E907-A7BE-4F02-99BF-1ABD0E989134}.Release|Win32.Build.0 = Release|Win32
+		{2AC4D563-AECC-4639-9135-9B4697C8AF63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2AC4D563-AECC-4639-9135-9B4697C8AF63}.Debug|Win32.Build.0 = Debug|Win32
+		{2AC4D563-AECC-4639-9135-9B4697C8AF63}.Release|Win32.ActiveCfg = Release|Win32
+		{2AC4D563-AECC-4639-9135-9B4697C8AF63}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
